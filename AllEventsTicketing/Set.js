@@ -32,8 +32,22 @@ function Set() {
         var resultList = [];
 
         /*-------------------------------Insert your code here -------------------------------------*/
-		resultList.push(this.symmetricDifference(listA, listB));
-		resultList.push(this.intersection(listA, listB));
+		var abResult = this.symmetricDifference(listA, listB);
+		var abIntersect = this.intersection(listA, listB);
+		console.log(abResult);
+		console.log(abIntersect);
+
+		for (var i = 0; i < abResult.length; i++) {
+			resultList.push(abResult[i]);
+
+		}
+		for (var j = 0; j < abIntersect.length; j++) {
+			resultList.push(abIntersect[j]);
+		}
+
+
+
+
         /*-------------------------------Insert your code here -------------------------------------*/
 
         return resultList;
@@ -71,8 +85,16 @@ to code this.
 	   var resultList = [];
        
 	   /*-------------------------------Insert your code here -------------------------------------*/
-        resultList.push(this.relativeComplement(listA, listB));
-        resultList.push(this.relativeComplement(listB, listA));
+        var abResult = this.relativeComplement(listA, listB);
+		var baResult = this.relativeComplement(listB, listA);
+
+		for (var i = 0; i < abResult.length; i++) {
+			resultList.push(abResult[i]);
+		}
+		for (var j = 0; j < baResult.length; j++) {
+			resultList.push(baResult[j]);
+        }
+
 	   /*-------------------------------Insert your code here -------------------------------------*/
        
 	   return resultList;
