@@ -1,18 +1,18 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="list-group-item-heading">R. Kent Jackson</h3>
+    <h3 class="list-group-item-heading">{{ contact.name }}</h3>
     <div class="pull-right">
       <button class="btn btn-warning">Edit</button>
       <button class="btn btn-danger">Delete</button>
     </div>
-    <img src="https://web.byui.edu/Directory/Employee/jacksonk.jpg" alt="Bro. Jackson" class="img-responsive">
+    <img [src]="contact.imageUrl" alt="{{ contact.name }}" class="img-responsive">
 
   </div>
   <div class="panel-body">
 
   </div>
   <div class="panel-body">
-    <p>Email: jacksonk@byui.edu</p><br>
-    <p>Phone: 208-496-3771</p>
+    <h4>Email: {{contact.email}} </h4><br>
+    <h4>Phone: {{contact.phone}} </h4>
   </div>
 </div>
