@@ -31,6 +31,10 @@ function Set() {
 
         var resultList = [];
 
+        if (listA === null || listB === null) {
+            return null;
+        }
+
         /*-------------------------------Insert your code here -------------------------------------*/
 		var abResult = this.symmetricDifference(listA, listB);
 		var abIntersect = this.intersection(listA, listB);
@@ -57,10 +61,11 @@ function Set() {
 
 
     this.relativeComplement = function(listA, listB) {
-/* I couldn't figure out how to create the relativeComplement in the way you intended us to.
-I ended up doing it in a very confusing and horrible way. I can't wait to learn the correct way
-to code this.
- */
+
+        if (listA === null || listB === null) {
+            return null;
+        }
+
 	   var resultList = [];
 
         if (listA === null || listB === null) {
@@ -83,9 +88,13 @@ to code this.
 	this.symmetricDifference = function(listA, listB) {
 
 	   var resultList = [];
-       
+
 	   /*-------------------------------Insert your code here -------------------------------------*/
-        var abResult = this.relativeComplement(listA, listB);
+        if (listA === null || listB === null) {
+            return null;
+        }
+
+	   	var abResult = this.relativeComplement(listA, listB);
 		var baResult = this.relativeComplement(listB, listA);
 
 		for (var i = 0; i < abResult.length; i++) {
