@@ -16,8 +16,10 @@ export class DocumentsService {
     return this.documents.slice();
   }
 
-  /**getDocument(id: string): Document {
-    return null;
-  }*/
+  getDocument(id: string): Document {
+    return this.documents.filter((documents: Document) => {
+      return documents.id === id;
+    }) [0] || null;
+  }
 
 }

@@ -1,4 +1,7 @@
-/**export class Message {
+import { Injectable } from "@angular/core";
+
+@Injectable()
+export class Message {
   public id: string;
   public subject: string;
   public msgText: string;
@@ -10,8 +13,8 @@
     this.msgText = msgText;
     this.sender = sender;
   }
-}*/
-import { Injectable} from "@angular/core";
+}
+/**import { Injectable} from "@angular/core";
 
 @Injectable()
 export class Message {
@@ -21,4 +24,4 @@ export class Message {
               public sender: string) {
 
   }
-}
+}*/
