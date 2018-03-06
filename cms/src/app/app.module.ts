@@ -20,7 +20,14 @@ import { DropdownDirective} from "./DropDown/dropdown.directive";
 import {ContactService} from "./contacts/contact.service";
 import {MessagesService} from "./messages/messages.service";
 import {DocumentsService} from "./documents/documents.service";
+/**import {RouterModule, Routes} from "@angular/router";
 
+const appRoutes: Routes =[
+  { path: '', component: AppComponent},
+  { path: 'Documents', component: DocumentsComponent},
+  { path: 'Messages', component: MessagesComponent},
+  { path: 'Contacts', component: ContactsComponent}
+];*/
 
 @NgModule({
   declarations: [
@@ -41,7 +48,8 @@ import {DocumentsService} from "./documents/documents.service";
     DropdownDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    /**RouterModule.forRoot(appRoutes)*/
   ],
   providers: [ContactService, DocumentsService, MessagesService],
   bootstrap: [AppComponent]
