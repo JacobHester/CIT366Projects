@@ -20,14 +20,11 @@ import { DropdownDirective} from "./DropDown/dropdown.directive";
 import {ContactService} from "./contacts/contact.service";
 import {MessagesService} from "./messages/messages.service";
 import {DocumentsService} from "./documents/documents.service";
-/**import {RouterModule, Routes} from "@angular/router";
-
-const appRoutes: Routes =[
-  { path: '', component: AppComponent},
-  { path: 'Documents', component: DocumentsComponent},
-  { path: 'Messages', component: MessagesComponent},
-  { path: 'Contacts', component: ContactsComponent}
-];*/
+import {AppRouting} from "./app-routing";
+import { DocumentViewComponent } from './documents/document-view/document-view.component';
+import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
+import { WindRefService} from "./wind-ref.service";
+import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +42,16 @@ const appRoutes: Routes =[
     MessageItemComponent,
     MessageEditComponent,
     MessageListComponent,
-    DropdownDirective
+    DropdownDirective,
+    DocumentViewComponent,
+    DocumentEditComponent,
+    ContactEditComponent
   ],
   imports: [
     BrowserModule,
-    /**RouterModule.forRoot(appRoutes)*/
+    AppRouting
   ],
-  providers: [ContactService, DocumentsService, MessagesService],
+  providers: [ContactService, DocumentsService, MessagesService, WindRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

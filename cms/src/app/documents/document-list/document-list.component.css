@@ -1,7 +1,7 @@
 .center-panel {
   margin-left: auto;
   margin-right: auto;
-  width: 45rem;
+
 }
 
 .title {
@@ -14,6 +14,4 @@
   padding-right:1rem;
 }
 
-#documentPanel{
-  min-width: 400px;
-}
+

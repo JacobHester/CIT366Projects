@@ -2,8 +2,8 @@
   <div class="panel-heading">
     <h3 class="list-group-item-heading">{{ contact.name }}</h3>
     <div class="pull-right">
-      <button class="btn btn-warning">Edit</button>
-      <button class="btn btn-danger">Delete</button>
+      <a class="btn btn-warning" routerLink="edit">Edit</a>
+      <a class="btn btn-danger" (click)="onDelete()">Delete</a>
     </div>
     <img [src]="contact.imageUrl" alt="{{ contact.name }}" class="img-responsive">
 

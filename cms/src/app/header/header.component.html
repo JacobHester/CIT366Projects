@@ -4,19 +4,18 @@
       <a class="navbar-brand" href="#">WeLearn</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a  (click)="onSelect('documents')">Documents</a></li>
-      <li><a  (click)="onSelect('messages')">Messages</a></li>
-      <li><a  (click)="onSelect('contacts')">Contacts</a> </li>
+      <li routerLinkActive="active"><a routerLink="/documents">Documents</a></li>
+      <li routerLinkActive="active"><a routerLink="/messages">Messages</a></li>
+      <li routerLinkActive="active"><a routerLink="/contacts">Contacts</a> </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown" appDropdown>
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">User
+        <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer">User
           <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a >Login</a></li>
-          <li><a href="#">Other</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a style="cursor: pointer">Login</a></li>
+          <li><a style="cursor: pointer">Other</a></li>
+          <li><a style="cursor: pointer">Logout</a></li>
         </ul>
       </li>
     </ul>
