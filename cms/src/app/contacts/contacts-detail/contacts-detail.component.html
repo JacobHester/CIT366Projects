@@ -15,4 +15,20 @@
     <h4>Email: {{contact.email}} </h4><br>
     <h4>Phone: {{contact.phone}} </h4>
   </div>
+
+  <div class="form-group">
+    <label for="groupList">Group contacts</label>
+
+    <div class="row" id="groupList">
+
+      <div *ngFor="let contact of contact.group; let i = index">
+        <div>
+          <app-contact-item class="col-sm-11" [contact]="contact"></app-contact-item>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+

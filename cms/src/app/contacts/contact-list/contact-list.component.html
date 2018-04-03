@@ -9,8 +9,9 @@
   <div class="panel-body">
     <div class="row">
       <app-contact-item
-        *ngFor="let contactIt of contacts"
-        [contact]="contactIt"></app-contact-item>
+        *ngFor="let contact of contacts" [contact]="contact"
+        dnd-draggable [dragEnabled]="true" [dragData]="contact" [dropZones]="['contactGroup']"
+      ></app-contact-item>
     </div>
   </div>
 </div>

@@ -9,7 +9,8 @@ export class Contact {
   public imageUrl: string;
   public group: any;
 
-  constructor(id: string, name: string, email: string, phone: string, imageUrl: string, group: string) {
+  constructor(id: string, name: string, email: string, phone: string, imageUrl: string, group: any
+  ) {
     this.id = id;
     this.name = name;
     this.email = email;
