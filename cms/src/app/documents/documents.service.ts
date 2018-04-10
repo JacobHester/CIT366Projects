@@ -2,6 +2,7 @@ import {EventEmitter, Injectable, Output} from '@angular/core';
 import {Document} from "./document.model";
 import {MOCKDOCUMENTS} from "./MOCKDOCUMENTS";
 import {Subject} from "rxjs/Subject";
+import {Http, Response} from '@angular/http'
 
 @Injectable()
 export class DocumentsService {
